@@ -1,5 +1,16 @@
 from lab02 import seconds_to_hms, admission_price, sum_multiples, total_of_positives
 
+def seconds_to_hms(total_seconds):
+    # TODO (Part 1): return the time as a string "H:MM:SS"
+    #   e.g. seconds_to_hms(3661) should return "1:01:01"
+    hours: int
+    minutes: int
+    seconds: int
+    hours = total_seconds//3600
+    minutes = total_seconds%3600//60
+    seconds = total_seconds%60
+    return f"{hours}:{minutes:02d}:{seconds:02d}"
+
 
 def test_seconds_to_hms():
     assert seconds_to_hms(3661) == "1:01:01"
